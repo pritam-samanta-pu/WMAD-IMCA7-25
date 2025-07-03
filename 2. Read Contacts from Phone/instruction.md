@@ -52,7 +52,7 @@ Basic layout with just a Button and a ListView.
 Here’s a clean and easy-to-understand version:
 
 ```java
-package com.example.phbook;
+package com.example.phbook; 
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -140,10 +140,5 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults, int deviceId) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults, deviceId);
-
-    }
 }
 ```
