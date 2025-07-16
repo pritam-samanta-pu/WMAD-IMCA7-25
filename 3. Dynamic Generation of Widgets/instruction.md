@@ -149,31 +149,25 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
-
-    private EditText inp;
-    private Button btn;
+public class SecondActivity extends AppCompatActivity {
+    private ListView lv;
+    ArrayList<String> arrayList;
+    ArrayAdapter<String> adapter;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_second);
 
-        //coding start from here
-
-        inp=findViewById(R.id.inp);
-        btn=findViewById(R.id.btn);
-        btn.setOnClickListener(v->{
-            String s=inp.getText().toString().trim();
-            if(s.isEmpty()){
-                Toast.makeText(this, "Input Field is Empty!", Toast.LENGTH_SHORT).show();
-                return;
-            }
-            int count=Integer.parseInt(s);
-            Intent intent=new Intent(MainActivity.this,SecondActivity.class);
-            intent.putExtra("count",count);
-            startActivity(intent);
-        });
+        lv=findViewById(R.id.iv);
+        int count=getIntent().getIntExtra("count",0);
+        arrayList=new ArrayList<>();
+        for (int i=1;i<=count;i++){
+            arrayList.add("Item "+i);
+        }
+        adapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,arrayList);
+        lv.setAdapter(adapter);
     }
 }
 ```
