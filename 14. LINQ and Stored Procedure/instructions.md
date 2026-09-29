@@ -382,3 +382,7 @@ btnView
 GridView:
 GridView1
 ```
+
+## Output
+
+<img src="https://github.com/pritam-samanta-pu/WMAD-IMCA7-25/blob/main/outputs/14.png" alt="LINQ and Stored Procedure" style="width:50%;">
