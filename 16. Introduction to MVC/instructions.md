@@ -479,3 +479,6 @@ View
    ↓
 User
 ```
+## Output
+
+<img src="https://github.com/pritam-samanta-pu/WMAD-IMCA7-25/blob/main/outputs/16.png" alt="Introduction to MVC" style="width:50%;">
